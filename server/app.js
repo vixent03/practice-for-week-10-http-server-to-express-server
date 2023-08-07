@@ -47,3 +47,16 @@
 
 // STEP 1: Set port and listen for requests
 // Your code here
+
+import express from "express"
+const app = express()
+app.use(express.json())
+
+app.get("/user/:userId")
+const userId = req.params.userId
+res.status(200).send(`User details for userId: ${userId}`,)
+
+port = 5000
+app.listen(port,()=>{
+    `sever is listening of port ${port}`
+})
